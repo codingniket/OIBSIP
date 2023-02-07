@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Light Blub</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="images/menu.png" alt="menu" class="menu-img" />
+            <img src="images/logo.png" alt="logo" class="logo" />
+            <ul>
+                <li><a href="shorturl.at/bBJ06">Articles</a></li>
+                <li onclick="colorChange()">Colorful</li>
+                <li><a href="">Turn ON -></a></li>
+            </ul>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+        </nav>
+
+        <div class="lamp-cont">
+            <img src="images/lamp.png" alt="lamp" class="lamp">
+            <img src="images/light.png" alt="light" class="light" id="light">
+        </div>
+
+        <div class="text">
+            <h1>Thomas Edison</h1>
+            <p>Thomas Alva Edison (February 11, 1847 – October 18, 1931)
+                was an American inventor and businessman.
+                He developed many devices in fields such as electric power
+                generation, mass communication, sound recording, and
+                motion pictures.These inventions, which include the
+                phonograph, the motion picture camera, and early versions
+                of the electric light bulb, have had a widespread impact
+                on the modern industrialized world.</p>
+            <a href="https://en.wikipedia.org/wiki/Thomas_Edison">Learn More</a>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn")
+        var light = document.getElementById("light")
+        function toggleBtn() {
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+        }
+
+        function colorChange() {
+            let x = document.getElementById("light")
+            if (x.src.match('images/light.png')) {
+                x.src = "images/light2.png"
+            }
+            else {
+                x.src = "images/light.png"
+            }
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
